@@ -1,5 +1,15 @@
 function findFirstDuplicate(arr) {
-  // type your code here
+  const unique = []
+
+  for (const el of arr) {
+    if (unique.includes(el)){
+      return el
+    }
+    else if (!unique.includes(el)) {
+      unique.push(el)
+    }
+  }
+  return -1
 }
 
 if (require.main === module) {

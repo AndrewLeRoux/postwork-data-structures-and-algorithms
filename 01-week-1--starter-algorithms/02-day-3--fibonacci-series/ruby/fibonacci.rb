@@ -1,5 +1,11 @@
 def fibonacci(num)
-  # type your code in here
+  if num == 0
+    0
+  elsif num == 1
+    1
+  else
+    (0...num).each
+  end
 end
 
 if __FILE__ == $PROGRAM_NAME

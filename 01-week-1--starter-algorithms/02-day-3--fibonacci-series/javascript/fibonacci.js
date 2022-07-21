@@ -1,5 +1,20 @@
 function fibonacci(num) {
-  // type your code here
+  if (num == 0) {
+    return 0
+  }
+  else if (num == 1){
+    return 1
+  }
+  else {
+    let first = 0
+    let second = 1
+    for ( let i = 2; i <= num; i++) {
+      let temp = second
+      second = second + first
+      first = temp
+    }
+    return second
+  }
 }
 
 if (require.main === module) {

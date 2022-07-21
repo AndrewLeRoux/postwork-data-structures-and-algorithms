@@ -1,5 +1,14 @@
 def find_first_duplicate(arr)
-  # type your code in here
+  arr.each_with_index do |x, idx|
+    if idx > 0
+      arr.slice(0,idx).each do |y|
+        if x == y
+          return x
+        end
+      end
+    end
+  end
+  -1
 end
 
 if __FILE__ == $PROGRAM_NAME
