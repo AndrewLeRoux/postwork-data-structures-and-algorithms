@@ -1,10 +1,17 @@
 def fibonacci(num)
+  num1 = 0
+  num2 = 1
   if num == 0
-    0
+    num1
   elsif num == 1
-    1
+    num2
   else
-    (0...num).each
+    (2...num + 1).each do |x|
+      temp = num2
+      num2 = num1 + num2
+      num1 = temp
+    end
+    num2
   end
 end
 

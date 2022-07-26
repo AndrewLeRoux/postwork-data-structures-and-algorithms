@@ -1,5 +1,17 @@
 function selectionSort(arr) {
-  // type your code here
+  for ( let i = 0; i < arr.length; i++) {
+    let index = 0
+    let min = Number.MAX_VALUE
+    for ( let j = i; j < arr.length; j++) {
+      if (arr[j] < min ) {
+        min = arr[j]
+        index = j
+      }
+    }
+    arr[index] = arr[i]
+    arr[i] = min
+  }
+  return arr
 }
 
 if (require.main === module) {
